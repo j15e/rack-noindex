@@ -16,4 +16,7 @@ Gem::Specification.new do |s|
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ['lib']
   s.rubyforge_project = '[none]'
+  s.add_dependency 'rack'
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rack-test'
 end

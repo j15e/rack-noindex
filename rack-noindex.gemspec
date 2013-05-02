@@ -19,4 +19,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'rack'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rack-test'
+  s.add_development_dependency 'contest'
 end

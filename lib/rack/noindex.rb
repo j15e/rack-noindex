@@ -5,7 +5,7 @@ module Rack
   module Noindex
     autoload :Base, 'rack/noindex/base'
 
-    def self.new(app, condition)
+    def self.new(app, condition = nil)
       Rack::Builder.new do
         use ::Rack::Noindex::Base, condition
         run app

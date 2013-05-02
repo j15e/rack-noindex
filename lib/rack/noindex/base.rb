@@ -7,6 +7,9 @@ module Rack
       extend Rack::Utils
 
       def initialize(app, condition)
+        if condition.nil?
+          condition = lambda { |env| env['SERVER_NAME'] =~ /\.herokuapp\.com$/ }
+        end
         @app = app
         @condition = condition
       end

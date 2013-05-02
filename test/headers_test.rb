@@ -10,7 +10,7 @@ class HeadersTest < UnitTest
   end
 
   def noindex(app)
-    condition = Proc.new { |env| env['HOSTNAME'] == 'www.indexed.com' }
+    condition = lambda { |env| env['HOSTNAME'] == 'www.indexed.com' }
     Rack::Lint.new(Rack::Noindex.new(app, condition))
   end
 

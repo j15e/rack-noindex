@@ -6,5 +6,5 @@
 
 ```ruby
 # config.ru
-use Rack::Noindex, Proc.new { |env| env['HOSTNAME'] != 'www.indexed.com' }
+use Rack::Noindex, lambda { |env| env['HOSTNAME'] != 'www.indexed.com' }
 ```

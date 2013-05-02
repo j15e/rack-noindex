@@ -1,6 +1,6 @@
 # rack-noindex
 
-> Rack middleware to add X-Robots-Tag: noindex on a given condition.
+> Rack middleware to add X-Robots-Tag: noindex header on a given condition.
 
 [![Build Status](https://travis-ci.org/j15e/rack-noindex.png?branch=master)](https://travis-ci.org/j15e/rack-noindex)
 [![Gem Version](https://badge.fury.io/rb/rack-noindex.png)](https://rubygems.org/gems/rack-noindex)
@@ -11,10 +11,10 @@
 ```ruby
 # config.ru
 
-# Default condition for noindex on *.herokuapp.com
+# By default it adds noindex header for domain matching `*.herokuapp.com`
 use Rack::Noindex
 
-# or set custom condition
+# Set a custom condition using rack env and a lambda block :
 use Rack::Noindex, lambda { |env| env['SERVER_NAME'] =~ /\.herokuapp\.com$/ }
 ```
 
@@ -24,4 +24,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on contributing and runn
 
 ## Credits
 
-Made for fun and development environments without passwords by [@j15e](https://github.com/j15e).
+Made for fun and public development environments by [@j15e](https://github.com/j15e).

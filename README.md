@@ -6,5 +6,10 @@
 
 ```ruby
 # config.ru
-use Rack::Noindex, lambda { |env| env['SERVER_NAME'] != 'www.indexed.com' }
+
+# Default condition for noindex on *.herokuapp.com
+use Rack::Noindex
+
+# or set custom condition
+use Rack::Noindex, lambda { |env| env['SERVER_NAME'] =~ /\.herokuapp\.com$/ }
 ```

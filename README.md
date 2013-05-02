@@ -17,3 +17,11 @@ use Rack::Noindex
 # or set custom condition
 use Rack::Noindex, lambda { |env| env['SERVER_NAME'] =~ /\.herokuapp\.com$/ }
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on contributing and running test.
+
+## Credits
+
+Made for fun and development environments without passwords by [@j15e](https://github.com/j15e).

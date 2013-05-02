@@ -1,11 +1,8 @@
 require 'rack/noindex'
-require 'rack/utils'
 
 module Rack
   module Noindex
     class Base
-      extend Rack::Utils
-
       def initialize(app, condition)
         if condition.nil?
           condition = lambda { |env| env['SERVER_NAME'] =~ /\.herokuapp\.com$/ }

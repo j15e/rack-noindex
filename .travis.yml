@@ -4,8 +4,9 @@ rvm:
   - 1.9.2
   - 1.9.3
   - 2.0.0
-  - rbx-18mode
-  - rbx-19mode
+  - 2.2.7
+  - 2.3.4
+  - 2.4.1
   - jruby-18mode
   - jruby-19mode
   - jruby-head

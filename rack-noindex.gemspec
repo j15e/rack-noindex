@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files app lib`.split("\n")
   s.platform      = Gem::Platform::RUBY
   s.require_paths = ['lib']
-  s.rubyforge_project = '[none]'
+  s.licenses      = ['MIT']
   s.add_dependency 'rack'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rack-test'

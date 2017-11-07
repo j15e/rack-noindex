@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = '[none]'
   s.add_dependency 'rack'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'rack-test'
+  s.add_development_dependency 'rack-test', '< 0.7'
   s.add_development_dependency 'contest'
+  s.add_development_dependency 'test-unit', '1.2.3'
 end

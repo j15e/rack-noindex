@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gemspec
+ruby RUBY_VERSION
 
-gem 'rack', '< 2.0'
+gemspec

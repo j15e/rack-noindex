@@ -14,10 +14,12 @@ Gem::Specification.new do |s|
 
   s.files         = `git ls-files app lib`.split("\n")
   s.platform      = Gem::Platform::RUBY
+  s.required_ruby_version = '>= 1.9.2'
   s.require_paths = ['lib']
   s.rubyforge_project = '[none]'
   s.add_dependency 'rack'
   s.add_development_dependency 'rake'
-  s.add_development_dependency 'rack-test'
+  s.add_development_dependency 'rack-test', '< 0.7'
   s.add_development_dependency 'contest'
+  s.add_development_dependency 'test-unit'
 end
